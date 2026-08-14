@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ffprobe -v error -show_entries stream=codec_type,width,height -of csv=p=0 \"/mnt/c/apps/app-facom-tech-week/src/assets/lobs/lobs-home.mp4\")",
+      "Bash(python3 -c \"import cv2\")",
+      "Bash(python3 -m pip install --quiet imageio-ffmpeg)",
+      "Bash(python3 -)",
+      "Bash(python3 -m pip install --quiet --break-system-packages imageio-ffmpeg)",
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "Bash(mkdir -p /tmp/shot-driver)",
+      "Bash(npm init *)",
+      "Bash(node drive.mjs)",
+      "Bash(lsof -ti:5173 -sTCP:LISTEN)",
+      "Bash(xargs -r kill)"
+    ]
+  }
+}
