@@ -1,5 +1,7 @@
 # FACOM Tech Week App
 
+🔗 **Acesso ao App (Ao Vivo):** [https://ShayeneFigueredo.github.io/app-techweek/](https://ShayeneFigueredo.github.io/app-techweek/)
+
 Aplicativo oficial para a FACOM Tech Week, projetado para engajar os participantes por meio de um sistema interativo de missoes e conexoes.
 
 ## Visao Geral
