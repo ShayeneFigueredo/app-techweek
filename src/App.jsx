@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, NavLink, useLocation, Navigate, useNavigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, NavLink, useLocation, Navigate, useNavigate } from 'react-router-dom';
 import { Home, QrCode, ScanLine, Trophy, User } from 'lucide-react';
 import { useEffect } from 'react';
 import Dashboard from './pages/Dashboard';
@@ -118,9 +118,9 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AppContent />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
