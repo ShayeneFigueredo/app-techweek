@@ -12,7 +12,7 @@ Referência: `SPEC.md` nesta mesma pasta.
 ## Suposições assumidas (perguntas em aberto do SPEC, decididas pra destravar o plano — revisar se discordar)
 
 1. Respostas de missões manuais são persistidas como `metadata` (jsonb) no evento de pontos, não descartadas.
-2. Desempate no Ranking: pontos desc, depois `created_at` do perfil (asc) — quem se cadastrou primeiro fica na frente em caso de empate.
+2. Desempate no Ranking: pontos desc, depois o timestamp do evento de pontos mais recente de cada participante (asc) — quem **atingiu aquele total primeiro** fica na frente em caso de empate (não é ordem de cadastro). *(Corrigido em revisão — versão anterior usava `created_at` do perfil por engano.)*
 3. Progresso de teste que já existe no `localStorage` de quem testou o app antes desta mudança **não é migrado** — perda aceita (dado de pré-lançamento, não de evento real).
 
 ## Modelo de dados

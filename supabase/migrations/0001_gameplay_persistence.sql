@@ -101,11 +101,15 @@ select
   p.username,
   p.first_name,
   p.created_at as profile_created_at,
-  coalesce(sum(pe.points), 0) as total_points
+  coalesce(sum(pe.points), 0) as total_points,
+  -- timestamp do evento mais recente: usado só pra desempate (regra abaixo)
+  max(pe.created_at) as last_scored_at
 from public.profiles p
 left join public.point_events pe on pe.user_id = p.id
 group by p.id, p.username, p.first_name, p.created_at
-order by total_points desc, p.created_at asc;
+-- Desempate: quem atingiu aquele total de pontos primeiro fica na frente
+-- (não é ordem de cadastro — é ordem de conclusão/pontuação).
+order by total_points desc, last_scored_at asc;
 
 -- A view roda com o dono dela (postgres), então enxerga todas as linhas de
 -- profiles/point_events mesmo com RLS restringindo o acesso direto às tabelas
