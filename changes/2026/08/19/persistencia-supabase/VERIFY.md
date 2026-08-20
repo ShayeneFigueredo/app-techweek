@@ -36,4 +36,4 @@ contra um banco de verdade. Isso é uma tarefa de QA manual pendente, listada no
 1. **Aplicar a migration nos dois projetos Supabase reais** (homolog primeiro, depois produção) — arquivo pronto em `supabase/migrations/0001_gameplay_persistence.sql`, não executado.
 2. **QA manual end-to-end** contra o Supabase de homolog: cadastrar 2 usuários de teste, confirmar que os pontos/missões de um não vazam pro outro, testar o dedup de scan/missão de verdade, conferir se o Ranking bate.
 3. **Push da branch `feature/persistencia-supabase` e abertura de PR pra `develop`** — não feito nesta tarefa (fica pra revisão humana).
-4. As 3 suposições registradas no `PLAN.md` (metadata de missão manual, critério de desempate, não migrar dado de teste do localStorage) foram assumidas, não confirmadas com você — revisar antes de aprovar o merge.
+4. ~~As 3 suposições registradas no `PLAN.md` foram assumidas, não confirmadas~~ — **confirmadas com Fabio em 2026-08-19**: metadata de missão manual ok; desempate corrigido pra ordem de conclusão (não cadastro); progresso de teste no `localStorage` descartado de propósito.
